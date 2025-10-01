@@ -93,7 +93,7 @@ JOIN us_real_estate.cybersyn.us_addresses AS addr
     ON (map.address_id = addr.address_id)
 WHERE addr.city = 'New York'
   AND addr.state = 'NY'
-  AND poi.category_main = 'Pizza Restaurant';
+  AND poi.category_main = 'Pizza Restaurant'
 LIMIT 10;
 ```
  
@@ -105,7 +105,7 @@ LIMIT 10;
 
 ```sql
 -- Grant privileges on sample database to the Honeycomb application
-GRANT IMPORTED PRIVILEGES ON DATABASE US_REAL_ESTATE TO APPLICATION HONEYCOMB_DATA_EXPLORER;
+GRANT IMPORTED PRIVILEGES ON DATABASE US_REAL_ESTATE TO HONEYCOMB_MAPS;
 ```
 Execute this SQL command in a Snowflake worksheet to grant the Honeycomb app access to the sample data we'll be using. If you're using your own database, replace "US_REAL_ESTATE" with your database name.
 
@@ -408,3 +408,9 @@ With Honeycomb Maps, you now have a powerful tool to visualize and analyze locat
 - Leverage Snowflake's security and governance model
 
 **Happy mapping!**
+
+###Resources
+- [Download Refernce Architecture](https://drive.google.com/file/d/1NuDVwb4MgjFabjwHM8-6aaPJwTnjxJZb/view?usp=sharing)
+- [Read Engineering Blog](https://www.honeycombmaps.com/blog/announcing-honeycomb-for-snowflake-high-performance-high-security)
+- [Read Medium Blog](https://medium.com/snowflake/building-interactive-map-dashboards-with-snowflake-and-honeycomb-dae2e2b2801a)
+- [Watch the Demo](https://youtu.be/hDbIRELQ_Kk?list=TLGG6VBsYYOwqukyNDA5MjAyNQ)
